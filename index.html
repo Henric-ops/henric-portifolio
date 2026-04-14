@@ -1,0 +1,451 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Henric | Portfólio</title>
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="header-inner">
+            <div class="logo">
+                <span class="logo-text">Portifólio</span>
+            </div>
+
+            <nav id="menuNav">
+                <a href="#inicio" class="nav-link active">Início</a>
+                <a href="#projetos" class="nav-link">Projetos</a>
+                <a href="#habilidades" class="nav-link">Habilidades</a>
+                <a href="#formacao" class="nav-link">Formação</a>
+                <a href="#contatos" class="nav-link">Contatos</a>
+            </nav>
+
+            <div class="header-right">
+                <button id="alterarTema" class="theme-toggle" title="Alternar tema">🌙</button>
+                <button id="menuToggle" class="hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="inicio" class="secao">
+            <div class="inicio-container">
+                <div class="inicio-photo-wrap">
+                    <div class="photo-glow"></div>
+                    <div class="photo-ring"></div>
+                    <img src="img/foto.jpeg"
+                        onerror="this.src='https://ui-avatars.com/api/?name=Henric&size=400&background=3B82F6&color=fff&bold=true&font-size=0.33'"
+                        alt="Henric" class="profile-photo" id="profilePhoto">
+                </div>
+
+                <div class="inicio-info">
+                    <p class="greeting">Olá, eu sou</p>
+                    <h1 class="typed-name">
+                        <span id="typing"></span><span class="cursor">|</span>
+                    </h1>
+                    <p class="tagline">Desenvolvedor Full Stack em busca de oportunidades</p>
+                    <p class="bio">
+                        Desenvolvo aplicações web do front ao back-end, com foco em código limpo, organização e
+                        desempenho.
+                        Tenho interesse em aprender novas tecnologias e contribuir em projetos reais.
+                    </p>
+
+                    <div class="inicio-actions">
+                        <a href="assets/CV Henric.pdf" download="CV_Henric.pdf"
+                            class="btn-primary">
+                            <i class="fa-solid fa-download"></i> Baixar CV
+                        </a>
+                        <div class="social-links">
+                            <a href="https://github.com/Henric" target="_blank" rel="noopener" title="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/henric/" target="_blank"
+                                rel="noopener" title="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.instagram.com/henric/" target="_blank" rel="noopener"
+                                title="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=henric@email.com&su=Contato&body=Olá, vim pelo seu site!"
+                                target="_blank" title="Email">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="particles" aria-hidden="true">
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+            </div>
+        </section>
+
+        <section id="projetos" class="secao">
+            <div class="section-header">
+                <h2 class="section-title">Projetos</h2>
+                <p class="section-sub">Uma seleção dos meus trabalhos mais recentes</p>
+            </div>
+
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <div class="project-img-wrap">
+                        <img src="img/projetoCinco.png"
+                            onerror="this.src='https://placehold.co/600x340/1E293B/60A5FA?text=Projeto+01'"
+                            alt="Projeto 1" class="project-img">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Henric/projeto1" target="_blank"
+                                class="btn-ver-projeto">
+                                <i class="fa-brands fa-github"></i> Ver Projeto
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span>Laravel</span><span>Bootstrap</span><span>PHP</span><span>MySQL</span>
+                        </div>
+                        <h3 class="project-title">Sistema de Repositório de TCC</h3>
+                        <p class="project-desc">Sistema web desenvolvido para armazenamento e gerenciamento de Trabalhos de Conclusão de Curso (TCC), permitindo o controle de bancas avaliadoras, orientadores e trabalhos acadêmicos.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img-wrap">
+                        <img src="img/projetoUm.png"
+                            onerror="this.src='https://placehold.co/600x340/1E293B/60A5FA?text=Projeto+01'"
+                            alt="Projeto 1" class="project-img">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Henric/projeto2" target="_blank"
+                                class="btn-ver-projeto">
+                                <i class="fa-brands fa-github"></i> Ver Projeto
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span>PHP</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>MySQL</span>
+                        </div>
+                        <h3 class="project-title">Sistema de Gerenciamento de Degustações</h3>
+                        <p class="project-desc">A plataforma tem como objetivo fornecer uma ferramenta prática e
+                            acessível via navegador para que entusiastas de cerveja possam registrar e gerenciar suas
+                            experiências de degustação.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img-wrap">
+                        <img src="img/ProjetoDois.png"
+                            onerror="this.src='https://placehold.co/600x340/1E293B/60A5FA?text=Projeto+01'"
+                            alt="Projeto 1" class="project-img">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Henric/projeto3" target="_blank"
+                                class="btn-ver-projeto">
+                                <i class="fa-brands fa-github"></i> Ver Projeto
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span>PHP</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>MySQL</span>
+                        </div>
+                        <h3 class="project-title">Sistema de Gerenciamento de Degustações</h3>
+                        <p class="project-desc">Sistema desktop desenvolvido para entusiastas de cervejas que desejam
+                            catalogar suas degustações, avaliar rótulos e acompanhar estatísticas de consumo de forma
+                            personalizada.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img-wrap">
+                        <img src="img/ProjetoTres.png"
+                            onerror="this.src='https://placehold.co/600x340/1E293B/60A5FA?text=Projeto+01'"
+                            alt="Projeto 1" class="project-img">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Henric/projeto4" target="_blank"
+                                class="btn-ver-projeto">
+                                <i class="fa-brands fa-github"></i> Ver Projeto
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span>java</span><span>UI-Swing</span><span>MySQL</span>
+                        </div>
+                        <h3 class="project-title">Sistema de Gerenciamento de Hóspedes</h3>
+                        <p class="project-desc">A plataforma tem como O objetivo é fornecer uma plataforma para hotéis
+                            ou pousadas gerenciarem o fluxo de hóspedes e o controle de suas estadias (hospedagens),
+                            permitindo o cadastro, consulta, atualização e exclusão de registros.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img-wrap">
+                        <img src="img/ProjetoQuatro.png"
+                            onerror="this.src='https://placehold.co/600x340/1E293B/60A5FA?text=Projeto+01'"
+                            alt="Projeto 1" class="project-img">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Henric/projeto5" target="_blank"
+                                class="btn-ver-projeto">
+                                <i class="fa-brands fa-github"></i> Ver Projeto
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span>PHP</span><span>Java</span><span>XML</span><span>MySQL</span><span>Android Studio</span>
+                        </div>
+                        <h3 class="project-title">Sistema de Gerenciamento de Transporte Mobile</h3>
+                        <p class="project-desc">Sistema desenvolvido para gerenciamento e rastreamento de produtos em transporte, permitindo o controle de usuários, produtos e eventos logísticos em tempo real.
+
+</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="habilidades" class="secao">
+            <div class="section-header">
+                <h2 class="section-title">Habilidades</h2>
+                <p class="section-sub">Tecnologias e ferramentas que utilizo</p>
+            </div>
+
+            <div class="skills-categories">
+
+                <div class="skill-category">
+                    <h3 class="category-label"><i class="fa-solid fa-code"></i> Frontend</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card"><i class="fa-brands fa-html5"
+                                style="color:#E44D26"></i><span>HTML</span></div>
+                        <div class="skill-card"><i class="fa-brands fa-css3-alt"
+                                style="color:#264DE4"></i><span>CSS</span></div>
+                        <div class="skill-card"><i class="fa-brands fa-js"
+                                style="color:#F7DF1E"></i><span>JavaScript</span></div>
+                        <div class="skill-card"><i class="fa-brands fa-bootstrap"
+                                style="color:#7952B3"></i><span>Bootstrap</span></div>
+                        <div class="skill-card"><i class="fa-solid fa-j" style="color:#0769AD"></i><span>jQuery</span>
+                        </div>
+                        <div class="skill-card"><i class="fa-brands fa-android"
+                                style="color:#3DDC84"></i><span>Android</span></div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-label"><i class="fa-solid fa-server"></i> Backend &amp; Banco de Dados</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card"><i class="fa-brands fa-php" style="color:#777BB4"></i><span>PHP</span>
+                        </div>
+                        <div class="skill-card"><i class="fa-brands fa-laravel"
+                                style="color:#FF2D20"></i><span>Laravel</span></div>
+                        <div class="skill-card"><i class="fa-brands fa-java" style="color:#ED8B00"></i><span>Java</span>
+                        </div>
+                        <div class="skill-card"><i class="fa-solid fa-database"
+                                style="color:#336791"></i><span>PostgreSQL</span></div>
+                        <div class="skill-card"><i class="fa-solid fa-database"
+                                style="color:#00758F"></i><span>MySQL</span></div>
+                        <div class="skill-card"><i class="fa-solid fa-table" style="color:#4479A1"></i><span>SQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-label"><i class="fa-solid fa-wrench"></i> Ferramentas &amp; Outros</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card"><i class="fa-brands fa-git-alt"
+                                style="color:#F05032"></i><span>Git</span></div>
+                        <div class="skill-card"><i class="fa-brands fa-github"
+                                style="color:#E6EDF3"></i><span>GitHub</span></div>
+                        <div class="skill-card"><i class="fa-solid fa-terminal"
+                                style="color:#89E051"></i><span>Linux</span></div>
+                        <div class="skill-card"><i class="fa-solid fa-code" style="color:#007ACC"></i><span>VS
+                                Code</span></div>
+                        <div class="skill-card"><i class="fa-brands fa-figma"
+                                style="color:#F24E1E"></i><span>Figma</span></div>
+                        <div class="skill-card"><i class="fa-brands fa-android" style="color:#3DDC84"></i><span>Android
+                                Studio</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="formacao" class="secao">
+            <div class="section-header">
+                <h2 class="section-title">Formação</h2>
+                <p class="section-sub">Minha trajetória acadêmica e cursos</p>
+            </div>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-top">
+                            <span class="timeline-badge academic"><i class="fa-solid fa-graduation-cap"></i>
+                                Graduação</span>
+                            <span class="timeline-year">2023 — Atual</span>
+                        </div>
+                        <h3 class="timeline-title">Análise e Desenvolvimento de Sistemas</h3>
+                        <p class="timeline-institution"><i class="fa-solid fa-building-columns"></i> IFFAR — Campus São
+                            Vicente do Sul/RS</p>
+                        <p class="timeline-desc">Curso superior com foco em desenvolvimento de software, estruturas de
+                            dados, banco de dados e engenharia de software.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-top">
+                            <span class="timeline-badge course"><i class="fa-solid fa-certificate"></i> Cursos</span>
+                            <span class="timeline-year">2023 — Atual</span>
+                        </div>
+                        <h3 class="timeline-title">Cursos Realizados</h3>
+                        <p class="timeline-institution"><i class="fa-solid fa-laptop-code"></i> DIO — Digital Innovation
+                            One</p>
+                        <p class="timeline-desc">Realizei diversos cursos em variadas áreas de tecnologia, incluindo
+                            desenvolvimento web, mobile e boas práticas de programação.</p>
+                        <a href="https://web.dio.me/users/henric?tab=achievements" target="_blank"
+                            rel="noopener noreferrer" class="btn-ver-perfil">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver Perfil
+                        </a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-top">
+                            <span class="timeline-badge academic"><i class="fa-solid fa-school"></i> Ensino Médio</span>
+                            <span class="timeline-year">2020 — 2022</span>
+                        </div>
+                        <h3 class="timeline-title">Ensino Médio Integrado — Manutenção e Suporte em Informática</h3>
+                        <p class="timeline-institution"><i class="fa-solid fa-building-columns"></i> IFFAR — Campus São
+                            Vicente do Sul/RS</p>
+                        <p class="timeline-desc">Conclusão do ensino médio técnico com participação em olimpíadas de
+                            informática e matemática.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contatos" class="secao">
+            <div class="section-header">
+                <h2 class="section-title">Contatos</h2>
+                <p class="section-sub">Vamos construir algo incrível juntos?</p>
+            </div>
+
+            <div class="contatos-layout">
+
+                <div class="contatos-info">
+                    <h3 class="contatos-cta">Pronto para colaborar!</h3>
+                    <p class="contatos-text">Estou disponível para projetos freelance, oportunidades de emprego ou
+                        apenas uma boa conversa sobre tecnologia. Entre em contato!</p>
+
+                    <div class="contato-items">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=henric@email.com&su=Contato&body=Olá, vim pelo seu site!"
+                            class="contato-item" target="_blank">
+                            <div class="contato-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <span class="contato-label">Email</span>
+                                <span class="contato-value">henric@email.com</span>
+                            </div>
+                        </a>
+                        <a href="https://wa.me/5555999999999" class="contato-item" target="_blank">
+                            <div class="contato-icon whats"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div>
+                                <span class="contato-label">WhatsApp</span>
+                                <span class="contato-value">(55) 99 9999-9999</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/henric/" class="contato-item"
+                            target="_blank">
+                            <div class="contato-icon linkedin"><i class="fa-brands fa-linkedin-in"></i></div>
+                            <div>
+                                <span class="contato-label">LinkedIn</span>
+                                <span class="contato-value">henric</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/Henric" class="contato-item" target="_blank">
+                            <div class="contato-icon github"><i class="fa-brands fa-github"></i></div>
+                            <div>
+                                <span class="contato-label">GitHub</span>
+                                <span class="contato-value">Henric</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <form action="https://formspree.io/f/xxxxx" method="POST" class="form-contato" id="form-contato">
+                    <div class="campo-formulario">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                    </div>
+                    <div class="campo-formulario">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="campo-formulario">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999">
+                    </div>
+                    <div class="campo-formulario">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" placeholder="Conte-me sobre seu projeto..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn-enviar">
+                        <i class="fa-solid fa-paper-plane"></i> Enviar Mensagem
+                    </button>
+                    <p id="mensagem-sucesso"
+                        style="display:none; color:#10B981; margin-top:10px; text-align:center; font-weight:500;">✅
+                        Mensagem enviada com sucesso!</p>
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <p class="footer-copy">&copy; 2026 Henric. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="https://github.com/Henric" target="_blank" rel="noopener" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/henric/" target="_blank" rel="noopener"
+                    title="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/henric/" target="_blank" rel="noopener" title="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/5555999999999" target="_blank" rel="noopener" title="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=henric@email.com&su=Contato&body=Olá, vim pelo seu site!"
+                    target="_blank" title="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

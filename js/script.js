@@ -3,16 +3,23 @@ const corpo = document.body;
 const menuToggle = document.getElementById("menuToggle");
 const menuNav = document.getElementById("menuNav");
 const linksMenu = document.querySelectorAll(".nav-link");
-const secoes = document.querySelectorAll(".secao");
+const sections = document.querySelectorAll("main section");
 const destino = document.getElementById("typing");
 const form = document.getElementById("form-contato");
 const successMsg = document.getElementById("mensagem-sucesso");
 
-// Tema escuro inicial
-corpo.classList.add("dark");
-document.documentElement.classList.add("dark");
-alterarTema.textContent = "🌙";
-alterarTema.addEventListener("click", () => {
+const savedTheme = localStorage.getItem("tema");
+if (savedTheme === "light") {
+    corpo.classList.remove("dark");
+    document.documentElement.classList.remove("dark");
+    alterarTema.textContent = "☀️";
+} else {
+    corpo.classList.add("dark");
+    document.documentElement.classList.add("dark");
+    alterarTema.textContent = "🌙";
+}
+
+alterarTema?.addEventListener("click", () => {
     corpo.classList.toggle("dark");
     document.documentElement.classList.toggle("dark");
     const darkMode = corpo.classList.contains("dark");
@@ -20,20 +27,21 @@ alterarTema.addEventListener("click", () => {
     localStorage.setItem("tema", darkMode ? "dark" : "light");
 });
 
-// Menu Hamburger
-menuToggle.addEventListener("click", () => {
+menuToggle?.addEventListener("click", () => {
     menuNav.classList.toggle("show");
     menuToggle.textContent = menuNav.classList.contains("show") ? "✖" : "☰";
     menuToggle.setAttribute("aria-expanded", menuNav.classList.contains("show"));
 });
 
-// Links do menu
 linksMenu.forEach(link => {
-    link.addEventListener("click", e => {
-        e.preventDefault();
-        secoes.forEach(secao => secao.style.display = "none");
+    link.addEventListener("click", event => {
+        event.preventDefault();
+        const targetId = link.getAttribute("href");
+        const target = document.querySelector(targetId);
+        if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
         linksMenu.forEach(l => l.classList.remove("active"));
-        document.querySelector(link.getAttribute("href")).style.display = "block";
         link.classList.add("active");
         menuNav.classList.remove("show");
         menuToggle.textContent = "☰";
@@ -41,11 +49,18 @@ linksMenu.forEach(link => {
     });
 });
 
-// Mostra só início
-secoes.forEach(secao => secao.style.display = "none");
-document.querySelector("#inicio").style.display = "block";
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            linksMenu.forEach(link => {
+                link.classList.toggle("active", link.getAttribute("href") === `#${entry.target.id}`);
+            });
+        }
+    });
+}, { threshold: 0.45 });
 
-// Typed Name
+sections.forEach(section => observer.observe(section));
+
 if (destino) {
     let index = 0;
     const texto = "Henric";
@@ -58,7 +73,6 @@ if (destino) {
     })();
 }
 
-// Formulário de contato
 if (form) {
     form.addEventListener("submit", e => {
         e.preventDefault();

@@ -63,7 +63,7 @@ sections.forEach(section => observer.observe(section));
 
 if (destino) {
     let index = 0;
-    const texto = "Henric";
+    const texto = "Henric Baccin Sander";
     (function escrever() {
         destino.textContent = texto.slice(0, index);
         if (index < texto.length) {

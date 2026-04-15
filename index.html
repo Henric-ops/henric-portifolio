@@ -22,7 +22,6 @@
 
             <nav id="menuNav">
                 <a href="#inicio" class="nav-link active">Início</a>
-                <a href="#sobre" class="nav-link">Sobre</a>
                 <a href="#tecnologias" class="nav-link">Tecnologias</a>
                 <a href="#projetos" class="nav-link">Projetos</a>
                 <a href="#formacao" class="nav-link">Formação</a>
@@ -42,6 +41,12 @@
                 <div class="inicio-photo-wrap">
                     <div class="photo-glow"></div>
                     <div class="photo-ring"></div>
+                    <div class="photo-sparkles" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                     <img src="img/foto.jpeg"
                         onerror="this.src='https://ui-avatars.com/api/?name=Henric&size=400&background=146551&color=fff&bold=true&font-size=0.33'"
                         alt="Henric" class="profile-photo" id="profilePhoto">
@@ -54,7 +59,7 @@
                     </h1>
                     <p class="tagline">Estudante de Análise e Desenvolvimento de Sistemas</p>
                     <p class="bio">
-                        Crio aplicações web robustas usando códigos limpos e arquiteturas escaláveis. Meu objetivo é entregar soluções que aliem desempenho, usabilidade e organização.
+                        Busco oportunidades na área para aplicar meus conhecimentos em desenvolvimento web e contribuir com projetos que valorizem usabilidade, organização e performance.
                     </p>
 
                     <div class="inicio-actions">
@@ -71,33 +76,7 @@
             <div class="particles" aria-hidden="true">
                 <span></span><span></span><span></span><span></span>
                 <span></span><span></span><span></span><span></span>
-            </div>
-        </section>
-
-        <section id="sobre" class="secao">
-            <div class="section-header">
-                <h2 class="section-title">Sobre</h2>
-                <p class="section-sub">A minha visão como desenvolvedor e o que levo para cada projeto.</p>
-            </div>
-
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-body">
-                        <h3 class="project-title">Quem eu sou</h3>
-                        <p class="project-desc">Sou estudante de Análise e Desenvolvimento de Sistemas com experiência em Java, PHP, Laravel e bancos de dados. Trabalho no desenvolvimento de APIs, sistemas de gestão e interfaces pensadas para o usuário.</p>
-                        <p class="project-desc">Gosto de resolver problemas reais com soluções organizadas, sustentáveis e fáceis de manter.</p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-body">
-                        <h3 class="project-title">Meu foco</h3>
-                        <div class="project-tags">
-                            <span>Front-end</span><span>APIs</span><span>Banco de Dados</span><span>Software confiável</span>
-                        </div>
-                        <p class="project-desc">Busco construir sistemas que funcionem bem em produção, com atenção à arquitetura, desempenho e flexibilidade para crescer.</p>
-                    </div>
-                </div>
+                <span></span><span></span><span></span><span></span>
             </div>
         </section>
 
@@ -265,7 +244,7 @@
             <div class="contatos-layout">
                 <div class="contatos-info">
                     <h3 class="contatos-cta">Pronto para colaborar!</h3>
-                    <p class="contatos-text">Estou disponível para projetos freelance, oportunidades de emprego ou apenas uma boa conversa sobre tecnologia. Entre em contato!</p>
+                    <p class="contatos-text">Estou disponível para projetos freelance, oportunidades de emprego e para aplicar meus conhecimentos em desenvolvimento web. Vamos conversar!</p>
 
                     <div class="contato-items">
                         <a href="mailto:henricbaccin@gmail.com" class="contato-item">
@@ -298,28 +277,6 @@
                         </a>
                     </div>
                 </div>
-
-                <form action="https://formspree.io/f/xxxxx" method="POST" class="form-contato" id="form-contato">
-                    <div class="campo-formulario">
-                        <label for="nome">Nome</label>
-                        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
-                    </div>
-                    <div class="campo-formulario">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
-                    </div>
-                    <div class="campo-formulario">
-                        <label for="telefone">Telefone</label>
-                        <input type="tel" id="telefone" name="telefone" placeholder="(99) 9999-9999">
-                    </div>
-                            <label for="mensagem">Mensagem</label>
-                        <textarea id="mensagem" name="mensagem" placeholder="Conte-me sobre seu projeto..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn-enviar">
-                        <i class="fa-solid fa-paper-plane"></i> Enviar Mensagem
-                    </button>
-                    <p id="mensagem-sucesso" class="success-message">✅ Mensagem enviada com sucesso!</p>
-                </form>
             </div>
         </section>
     </main>

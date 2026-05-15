@@ -1,306 +1,432 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="pt-br" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta
+      name="description"
+      content="Portfólio de Henric Baccin, estudante de Análise e Desenvolvimento de Sistemas com projetos em Laravel, PHP, JavaScript e MySQL."
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
     <link
-        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
     <title>Henric | Portfólio</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header id="header">
-        <div class="header-inner">
-            <div class="logo">
-                <span class="logo-text">Henric</span>
-            </div>
-
-            <nav id="menuNav">
-                <a href="#inicio" class="nav-link active">Início</a>
-                <a href="#tecnologias" class="nav-link">Tecnologias</a>
-                <a href="#projetos" class="nav-link">Projetos</a>
-                <a href="#formacao" class="nav-link">Formação</a>
-                <a href="#contatos" class="nav-link">Contatos</a>
-            </nav>
-
-            <div class="header-right">
-                <button id="alterarTema" class="theme-toggle" title="Alternar tema">🌙</button>
-                <button id="menuToggle" class="hamburger" aria-label="Menu" aria-expanded="false">☰</button>
-            </div>
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-text">Henric</span>
         </div>
+
+        <nav id="menuNav">
+          <a href="#inicio" class="nav-link active">Início</a>
+          <a href="#tecnologias" class="nav-link">Tecnologias</a>
+          <a href="#projetos" class="nav-link">Projetos</a>
+          <a href="#formacao" class="nav-link">Formação</a>
+          <a href="#contatos" class="nav-link">Contatos</a>
+        </nav>
+
+        <div class="header-right">
+          <button id="alterarTema" class="theme-toggle" title="Alternar tema">
+            🌙
+          </button>
+
+          <button
+            id="menuToggle"
+            class="hamburger"
+            aria-label="Abrir menu de navegação"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
     </header>
 
     <main>
-        <section id="inicio" class="secao">
-            <div class="inicio-container">
-                <div class="inicio-photo-wrap">
-                    <div class="photo-glow"></div>
-                    <div class="photo-ring"></div>
-                    <div class="photo-sparkles" aria-hidden="true">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <img src="img/foto.jpeg"
-                        onerror="this.src='https://ui-avatars.com/api/?name=Henric&size=400&background=146551&color=fff&bold=true&font-size=0.33'"
-                        alt="Henric" class="profile-photo" id="profilePhoto">
-                </div>
+      <!-- INÍCIO -->
+      <section id="inicio" class="secao">
+        <div class="inicio-container">
+          <div class="inicio-photo-wrap">
+            <div class="photo-glow"></div>
+            <div class="photo-ring"></div>
 
-                <div class="inicio-info">
-                    <p class="greeting">Olá, eu sou</p>
-                    <h1 class="typed-name">
-                        <span id="typing"></span><span class="cursor">|</span>
-                    </h1>
-                    <p class="tagline">Estudante de Análise e Desenvolvimento de Sistemas</p>
-                    <p class="bio">
-                        Busco oportunidades na área para aplicar meus conhecimentos em desenvolvimento web e contribuir com projetos que valorizem usabilidade, organização e performance.
-                    </p>
-
-                    <div class="inicio-actions">
-                        <a href="#projetos" class="btn-primary">
-                            <i class="fa-solid fa-code"></i> Ver projetos
-                        </a>
-                        <a href="#contatos" class="btn-primary">
-                            <i class="fa-solid fa-envelope"></i> Entrar em contato
-                        </a>
-                    </div>
-                </div>
+            <div class="photo-sparkles" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
 
-            <div class="particles" aria-hidden="true">
-                <span></span><span></span><span></span><span></span>
-                <span></span><span></span><span></span><span></span>
-                <span></span><span></span><span></span><span></span>
-            </div>
-        </section>
+            <img
+              src="img/foto.jpeg"
+              onerror="
+                this.src =
+                  'https://ui-avatars.com/api/?name=Henric&size=400&background=146551&color=fff&bold=true&font-size=0.33'
+              "
+              alt="Foto de Henric"
+              class="profile-photo"
+              id="profilePhoto"
+            />
+          </div>
 
-        <section id="tecnologias" class="secao">
-            <div class="section-header">
-                <h2 class="section-title">Tecnologias</h2>
-                <p class="section-sub">Ferramentas e linguagens que utilizo para entregar projetos completos.</p>
+          <div class="inicio-info">
+            <p class="greeting">Olá, eu sou</p>
+
+            <h1 class="typed-name">
+              <span id="typing"></span>
+              <span class="cursor">|</span>
+            </h1>
+
+            <p class="tagline">
+              Estudante de Análise e Desenvolvimento de Sistemas
+            </p>
+
+            <p class="bio">
+              Busco oportunidades na área para aplicar meus conhecimentos em
+              desenvolvimento web e contribuir com projetos que valorizem
+              usabilidade, organização e performance.
+            </p>
+
+            <div class="inicio-actions">
+              <a href="#projetos" class="btn-primary">
+                <i class="fa-solid fa-code"></i>
+                Ver projetos
+              </a>
+
+              <a href="#contatos" class="btn-primary">
+                <i class="fa-solid fa-envelope"></i>
+                Entrar em contato
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="particles" aria-hidden="true">
+          <span></span><span></span><span></span><span></span> <span></span
+          ><span></span><span></span><span></span> <span></span><span></span
+          ><span></span><span></span>
+        </div>
+      </section>
+
+      <!-- TECNOLOGIAS -->
+      <section id="tecnologias" class="secao">
+        <div class="section-header">
+          <h2 class="section-title">Tecnologias</h2>
+          <p class="section-sub">Ferramentas e linguagens que utilizo.</p>
+        </div>
+
+        <div class="skills-categories">
+          <!-- FRONTEND -->
+          <div class="skill-category">
+            <h3 class="category-label">
+              <i class="fa-solid fa-code"></i>
+              Frontend
+            </h3>
+
+            <div class="skills-grid">
+              <div class="skill-card">
+                <i class="fa-brands fa-html5"></i>
+                <span>HTML</span>
+              </div>
+
+              <div class="skill-card">
+                <i class="fa-brands fa-css3-alt"></i>
+                <span>CSS</span>
+              </div>
+
+              <div class="skill-card">
+                <i class="fa-brands fa-js"></i>
+                <span>JavaScript</span>
+              </div>
+
+              <div class="skill-card">
+                <i class="fa-brands fa-bootstrap"></i>
+                <span>Bootstrap</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- BACKEND -->
+          <div class="skill-category">
+            <h3 class="category-label">
+              <i class="fa-solid fa-server"></i>
+              Backend
+            </h3>
+
+            <div class="skills-grid">
+              <div class="skill-card">
+                <i class="fa-brands fa-php"></i>
+                <span>PHP</span>
+              </div>
+
+              <div class="skill-card">
+                <i class="fa-brands fa-laravel"></i>
+                <span>Laravel</span>
+              </div>
+
+              <div class="skill-card">
+                <i class="fa-brands fa-java"></i>
+                <span>Java</span>
+              </div>
+
+              <div class="skill-card">
+                <i class="fa-solid fa-database"></i>
+                <span>MySQL</span>
+              </div>
+
+              <div class="skill-card">
+                <i class="fa-solid fa-database"></i>
+                <span>PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- FERRAMENTAS -->
+          <div class="skill-category">
+            <h3 class="category-label">
+              <i class="fa-solid fa-wrench"></i>
+              Ferramentas
+            </h3>
+
+            <div class="skills-grid">
+              <div class="skill-card">
+                <i class="fa-brands fa-git-alt"></i>
+                <span>Git</span>
+              </div>
+
+              <div class="skill-card">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+              </div>
+
+              <div class="skill-card">
+                <i class="fa-solid fa-code"></i>
+                <span>VS Code</span>
+              </div>
+
+              <div class="skill-card">
+                <i class="fa-brands fa-figma"></i>
+                <span>Figma</span>
+              </div>
+
+              <div class="skill-card">
+                <i class="fa-solid fa-table"></i>
+                <span>SQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJETOS -->
+      <section id="projetos" class="secao">
+        <div class="section-header">
+          <h2 class="section-title">Projetos</h2>
+          <p class="section-sub">
+            Uma seleção dos meus trabalhos mais recentes.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- PROJETO 1 -->
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <img
+                src="img/tccimg.png"
+                onerror="
+                  this.src =
+                    'https://placehold.co/600x340/146551/8FC1B5?text=TCC'
+                "
+                alt="Sistema de Repositório de TCC"
+                class="project-img"
+              />
+
+              <div class="project-overlay">
+                <a
+                  href="https://github.com/Henric-ops/Sistema-de-reposit-rio-de-TCC.git"
+                  target="_blank"
+                  class="btn-ver-projeto"
+                >
+                  <i class="fa-brands fa-github"></i>
+                  Ver Projeto
+                </a>
+              </div>
             </div>
 
-            <div class="skills-categories">
-                <div class="skill-category">
-                    <h3 class="category-label"><i class="fa-solid fa-code"></i> Frontend</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card"><i class="fa-brands fa-html5"></i><span>HTML</span></div>
-                        <div class="skill-card"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></div>
-                        <div class="skill-card"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
-                        <div class="skill-card"><i class="fa-brands fa-bootstrap"></i><span>Bootstrap</span></div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="category-label"><i class="fa-solid fa-server"></i> Backend</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card"><i class="fa-brands fa-php"></i><span>PHP</span></div>
-                        <div class="skill-card"><i class="fa-brands fa-laravel"></i><span>Laravel</span></div>
-                        <div class="skill-card"><i class="fa-brands fa-java"></i><span>Java</span></div>
-                        <div class="skill-card"><i class="fa-solid fa-database"></i><span>MySQL</span></div>
-                        <div class="skill-card"><i class="fa-solid fa-database"></i><span>PostgreSQL</span></div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="category-label"><i class="fa-solid fa-wrench"></i> Ferramentas</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
-                        <div class="skill-card"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
-                        <div class="skill-card"><i class="fa-solid fa-code"></i><span>VS Code</span></div>
-                        <div class="skill-card"><i class="fa-brands fa-figma"></i><span>Figma</span></div>
-                        <div class="skill-card"><i class="fa-solid fa-table"></i><span>SQL</span></div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <div class="project-body">
+              <div class="project-tags">
+                <span>Laravel</span>
+                <span>Bootstrap</span>
+                <span>PHP</span>
+                <span>MySQL</span>
+              </div>
 
-        <section id="projetos" class="secao">
-            <div class="section-header">
-                <h2 class="section-title">Projetos</h2>
-                <p class="section-sub">Uma seleção dos meus trabalhos mais recentes.</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-img-wrap">
-                        <img src="img/tccimg.png"
-                            onerror="this.src='https://placehold.co/600x340/146551/8FC1B5?text=TCC'"
-                            alt="Sistema de Repositório de TCC" class="project-img">
-                        <div class="project-overlay">
-                            <a href="https://github.com/Henric-ops/Sistema-de-reposit-rio-de-TCC.git" target="_blank"
-                                class="btn-ver-projeto">
-                                <i class="fa-brands fa-github"></i> Ver Projeto
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-body">
-                        <div class="project-tags">
-                            <span>Laravel</span><span>Bootstrap</span><span>PHP</span><span>MySQL</span>
-                        </div>
-                        <h3 class="project-title">Sistema de Repositório de TCC</h3>
-                        <p class="project-desc">Sistema web desenvolvido para armazenamento e gerenciamento de Trabalhos de Conclusão de Curso (TCC), permitindo o controle de bancas avaliadoras, orientadores e trabalhos acadêmicos.</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img-wrap">
-                        <img src="img/TelaDegustaCeva.png"
-                            onerror="this.src='https://placehold.co/600x340/146551/8FC1B5?text=Degustação'"
-                            alt="Sistema de Gerenciamento de Degustações" class="project-img">
-                        <div class="project-overlay">
-                            <a href="https://github.com/Henric-ops/Trabalho-final-web.git" target="_blank"
-                                class="btn-ver-projeto">
-                                <i class="fa-brands fa-github"></i> Ver Projeto
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-body">
-                        <div class="project-tags">
-                            <span>PHP</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>MySQL</span>
-                        </div>
-                        <h3 class="project-title">Sistema de Gerenciamento de Degustações</h3>
-                        <p class="project-desc">Plataforma para registrar e gerenciar experiências de degustação de cervejas, focada em usabilidade e controle completo do cadastro de rótulos.</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img-wrap">
-                        <img src="img/CapaBarber.png"
-                            onerror="this.src='https://placehold.co/600x340/146551/8FC1B5?text=Projeto+03'"
-                            alt="Projeto 3" class="project-img">
-                        <div class="project-overlay">
-                            <a href="https://github.com/Henric-ops/BarberHub.git" target="_blank"
-                                class="btn-ver-projeto">
-                                <i class="fa-brands fa-github"></i> Ver Projeto
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-body">
-                        <div class="project-tags">
-                            <span>PHP</span><span>Laravel</span><span>MySQL</span><span>Bootstrap</span>
-                        </div>
-                        <h3 class="project-title">Sistema de Agendamento para Barbearia</h3>
-                        <p class="project-desc">Agendamento com controle de conflitos de horário, gestão de clientes e barbeiros, dashboards personalizados por perfil e relatórios exportáveis em PDF.</p>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </section>
+              <h3 class="project-title">Sistema de Repositório de TCC</h3>
 
-        <section id="formacao" class="secao">
-            <div class="section-header">
-                <h2 class="section-title">Formação</h2>
-                <p class="section-sub">Minha trajetória acadêmica e cursos.</p>
+              <p class="project-desc">
+                Sistema web desenvolvido para armazenamento e gerenciamento de
+                Trabalhos de Conclusão de Curso (TCC), permitindo o controle de
+                bancas avaliadoras, orientadores e trabalhos acadêmicos.
+              </p>
+            </div>
+          </div>
+
+          <!-- PROJETO 2 -->
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <img
+                src="img/TelaDegustaCeva.png"
+                onerror="
+                  this.src =
+                    'https://placehold.co/600x340/146551/8FC1B5?text=Degustação'
+                "
+                alt="Sistema de Gerenciamento de Degustações"
+                class="project-img"
+              />
+
+              <div class="project-overlay">
+                <a
+                  href="https://github.com/Henric-ops/Trabalho-final-web.git"
+                  target="_blank"
+                  class="btn-ver-projeto"
+                >
+                  <i class="fa-brands fa-github"></i>
+                  Ver Projeto
+                </a>
+              </div>
             </div>
 
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-top">
-                            <span class="timeline-badge academic"><i class="fa-solid fa-graduation-cap"></i> Graduação</span>
-                            <span class="timeline-year">2024 — Atual</span>
-                        </div>
-                        <h3 class="timeline-title">Análise e Desenvolvimento de Sistemas</h3>
-                        <p class="timeline-institution"><i class="fa-solid fa-building-columns"></i> IFFAR — Campus São Vicente do Sul/RS</p>
-                        <p class="timeline-desc">Curso superior com foco em desenvolvimento de software, estruturas de dados, banco de dados e engenharia de software.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-top">
-                            <span class="timeline-badge course"><i class="fa-solid fa-award"></i> Curso</span>
-                            <span class="timeline-year">27/02/2026</span>
-                        </div>
-                        <h3 class="timeline-title">Nano Course DevOps & Agile Culture</h3>
-                        <p class="timeline-institution"><i class="fa-solid fa-building-columns"></i> FIAP / Nano Courses</p>
-                        <p class="timeline-desc">Certificado com 60 horas em práticas de DevOps e cultura ágil para desenvolvimento colaborativo e entrega contínua.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-top">
-                            <span class="timeline-badge course"><i class="fa-solid fa-award"></i> Curso</span>
-                            <span class="timeline-year">27/02/2026</span>
-                        </div>
-                        <h3 class="timeline-title">Curso de Inglês</h3>
-                        <p class="timeline-institution"><i class="fa-solid fa-building-columns"></i> Kultivi</p>
-                        <p class="timeline-desc">Certificado de participação no curso de Inglês com carga horária estimada de 115 horas.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <div class="project-body">
+              <div class="project-tags">
+                <span>PHP</span>
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>MySQL</span>
+              </div>
 
-        <section id="contatos" class="secao">
-            <div class="section-header">
-                <h2 class="section-title">Contatos</h2>
-                <p class="section-sub">Vamos construir algo incrível juntos?</p>
+              <h3 class="project-title">
+                Sistema de Gerenciamento de Degustações
+              </h3>
+
+              <p class="project-desc">
+                Plataforma para registrar e gerenciar experiências de degustação
+                de cervejas, focada em usabilidade e controle completo do
+                cadastro de rótulos.
+              </p>
+            </div>
+          </div>
+
+          <!-- PROJETO 3 -->
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <img
+                src="img/CapaBarber.png"
+                onerror="
+                  this.src =
+                    'https://placehold.co/600x340/146551/8FC1B5?text=Projeto+03'
+                "
+                alt="Sistema de Agendamento para Barbearia"
+                class="project-img"
+              />
+
+              <div class="project-overlay">
+                <a
+                  href="https://github.com/Henric-ops/BarberHub.git"
+                  target="_blank"
+                  class="btn-ver-projeto"
+                >
+                  <i class="fa-brands fa-github"></i>
+                  Ver Projeto
+                </a>
+              </div>
             </div>
 
-            <div class="contatos-layout">
-                <div class="contatos-info">
-                    <p class="contatos-text">Estou disponível para projetos freelance, oportunidades de emprego e para aplicar meus conhecimentos em desenvolvimento web. Vamos conversar!</p>
+            <div class="project-body">
+              <div class="project-tags">
+                <span>PHP</span>
+                <span>Laravel</span>
+                <span>MySQL</span>
+                <span>Bootstrap</span>
+              </div>
 
-                    <div class="contato-items">
-                        <a href="mailto:henricbaccin@gmail.com" class="contato-item">
-                            <div class="contato-icon"><i class="fa-solid fa-envelope"></i></div>
-                            <div>
-                                <span class="contato-label">Email</span>
-                                <span class="contato-value">henricbaccin@gmail.com</span>
-                            </div>
-                        </a>
-                        <a href="https://wa.me/5555996405560" class="contato-item" target="_blank">
-                            <div class="contato-icon whats"><i class="fa-brands fa-whatsapp"></i></div>
-                            <div>
-                                <span class="contato-label">WhatsApp</span>
-                                <span class="contato-value">(55) 99640-5560</span>
-                            </div>
-                        </a>
-                        <a href="https://www.linkedin.com/in/henric-baccin/" class="contato-item" target="_blank">
-                            <div class="contato-icon linkedin"><i class="fa-brands fa-linkedin-in"></i></div>
-                            <div>
-                                <span class="contato-label">LinkedIn</span>
-                                <span class="contato-value">henric</span>
-                            </div>
-                        </a>
-                        <a href="https://github.com/Henric-ops" class="contato-item" target="_blank">
-                            <div class="contato-icon github"><i class="fa-brands fa-github"></i></div>
-                            <div>
-                                <span class="contato-label">GitHub</span>
-                                <span class="contato-value">Henric</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+              <h3 class="project-title">
+                Sistema de Agendamento para Barbearia
+              </h3>
+
+              <p class="project-desc">
+                Agendamento com controle de conflitos de horário, gestão de
+                clientes e barbeiros, dashboards personalizados por perfil e
+                relatórios exportáveis em PDF.
+              </p>
             </div>
-        </section>
+          </div>
+
+          <!-- PROJETO 4 -->
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <img
+                src="img/LoginCosmetiq.png"
+                onerror="
+                  this.src =
+                    'https://placehold.co/600x340/146551/8FC1B5?text=Projeto+04'
+                "
+                alt="Sistema de Gestão de Revendas de Cosméticos"
+                class="project-img"
+              />
+
+              <div class="project-overlay">
+                <a
+                  href="https://github.com/Henric-ops/Sistema-de-revenda.git"
+                  target="_blank"
+                  class="btn-ver-projeto"
+                >
+                  <i class="fa-brands fa-github"></i>
+                  Ver Projeto
+                </a>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-tags">
+                <span>PHP</span>
+                <span>Laravel</span>
+                <span>MySQL</span>
+                <span>Bootstrap</span>
+                <span>JavaScript</span>
+              </div>
+
+              <h3 class="project-title">
+                Sistema de Gestão de Revendas de Cosméticos
+              </h3>
+
+              <p class="project-desc">
+                Sistema desenvolvido para gerenciar revendas de cosméticos, com
+                controle de clientes, vendas e pagamentos. Feito especialmente
+                para atender às necessidades da minha mãe.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-inner">
-            <p class="footer-copy">&copy; 2026 Henric. Todos os direitos reservados.</p>
-            <div class="footer-links">
-                <a href="https://github.com/Henric-ops" target="_blank" rel="noopener" title="GitHub">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/henric-baccin/" target="_blank" rel="noopener" title="LinkedIn">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-                <a href="https://wa.me/5555996405560" target="_blank" rel="noopener" title="WhatsApp">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
-                <a href="mailto:henricbaccin@gmail.com" target="_blank" title="Email">
-                    <i class="fa-solid fa-envelope"></i>
-                </a>
-            </div>
-        </div>
-    </footer>
-
     <script src="js/script.js"></script>
-</body>
-
+  </body>
 </html>

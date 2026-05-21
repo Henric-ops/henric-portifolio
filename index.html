@@ -1,326 +1,588 @@
-﻿<!DOCTYPE html>
-<html lang="pt-br" class="dark">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+﻿<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Henric Baccin — Dev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <title>Henric | Portfólio</title>
-</head>
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- NOISE OVERLAY -->
+    <div class="noise"></div>
 
-<body>
+    <!-- CURSOR -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- HEADER -->
     <header id="header">
-        <div class="header-inner">
-            <div class="logo">
-                <span class="logo-text">Henric</span>
-            </div>
-
-            <nav id="menuNav">
-                <a href="#inicio" class="nav-link active">Início</a>
-                <a href="#tecnologias" class="nav-link">Tecnologias</a>
-                <a href="#projetos" class="nav-link">Projetos</a>
-                <a href="#formacao" class="nav-link">Formação</a>
-                <a href="#contatos" class="nav-link">Contatos</a>
-            </nav>
-
-            <div class="header-right">
-                <button id="alterarTema" class="theme-toggle" title="Alternar tema">🌙</button>
-                <button id="menuToggle" class="hamburger" aria-label="Menu" aria-expanded="false">☰</button>
-            </div>
+      <div class="header-inner">
+        <a href="#inicio" class="logo-link">
+          <span class="logo">HB<span class="logo-dot">.</span></span>
+        </a>
+        <nav id="menuNav">
+          <a href="#inicio" class="nav-link active" data-text="Início"
+            >Início</a
+          >
+          <a href="#tecnologias" class="nav-link" data-text="Tech">Tech</a>
+          <a href="#projetos" class="nav-link" data-text="Projetos">Projetos</a>
+          <a href="#formacao" class="nav-link" data-text="Formação">Formação</a>
+          <a href="#contatos" class="nav-link" data-text="Contato">Contato</a>
+        </nav>
+        <div class="header-right">
+          <button
+            id="menuToggle"
+            class="hamburger"
+            aria-label="Menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
         </div>
+      </div>
     </header>
 
     <main>
-        <section id="inicio" class="secao">
-            <div class="inicio-container">
-                <div class="inicio-photo-wrap">
-                    <div class="photo-glow"></div>
-                    <div class="photo-ring"></div>
-                    <div class="photo-sparkles" aria-hidden="true">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <img src="img/foto.jpeg"
-                        onerror="this.src='https://ui-avatars.com/api/?name=Henric&size=400&background=146551&color=fff&bold=true&font-size=0.33'"
-                        alt="Henric" class="profile-photo" id="profilePhoto">
-                </div>
-
-                <div class="inicio-info">
-                    <p class="greeting">Olá, eu sou</p>
-                    <h1 class="typed-name">
-                        <span id="typing"></span><span class="cursor">|</span>
-                    </h1>
-                    <p class="tagline">Estudante de Análise e Desenvolvimento de Sistemas</p>
-                    <p class="bio">
-                        Busco oportunidades na área para aplicar meus conhecimentos em desenvolvimento web e contribuir com projetos que valorizem usabilidade, organização e performance.
-                    </p>
-
-                    <div class="inicio-actions">
-                        <a href="#projetos" class="btn-primary">
-                            <i class="fa-solid fa-code"></i> Ver projetos
-                        </a>
-                        <a href="#contatos" class="btn-primary">
-                            <i class="fa-solid fa-envelope"></i> Entrar em contato
-                        </a>
-                    </div>
-                </div>
+      <!-- HERO -->
+      <section id="inicio" class="section hero-section">
+        <div class="hero-grid">
+          <div class="hero-left" data-reveal>
+            <div class="hero-tag">
+              <span class="tag-dot"></span>
+              Disponível para oportunidades
             </div>
-
-            <div class="particles" aria-hidden="true">
-                <span></span><span></span><span></span><span></span>
-                <span></span><span></span><span></span><span></span>
-                <span></span><span></span><span></span><span></span>
+            <h1 class="hero-title">
+              <span class="title-line">Henric</span>
+              <span class="title-line accent-line">Baccin<em>.</em></span>
+            </h1>
+            <p class="hero-subtitle">Desenvolvedor Web</p>
+            <p class="hero-bio">
+              Estudante de Análise e Desenvolvimento de Sistemas. Crio
+              interfaces e sistemas que unem performance, usabilidade e código
+              limpo.
+            </p>
+            <div class="hero-actions">
+              <a href="#projetos" class="btn btn-primary">
+                Ver projetos <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="#contatos" class="btn btn-ghost"> Contato </a>
             </div>
-        </section>
-
-        <section id="tecnologias" class="secao">
-            <div class="section-header">
-                <h2 class="section-title">Tecnologias</h2>
-                <p class="section-sub">Ferramentas e linguagens que utilizo.</p>
+            <div class="hero-socials">
+              <a
+                href="https://github.com/Henric-ops"
+                target="_blank"
+                class="social-chip"
+              >
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/henric-baccin/"
+                target="_blank"
+                class="social-chip"
+              >
+                <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+              </a>
+              <a
+                href="https://wa.me/5555996405560"
+                target="_blank"
+                class="social-chip"
+              >
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+              </a>
             </div>
-
-            <div class="skills-categories">
-                <div class="skill-category">
-                    <h3 class="category-label"><i class="fa-solid fa-code"></i> Frontend</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card"><i class="fa-brands fa-html5"></i><span>HTML</span></div>
-                        <div class="skill-card"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></div>
-                        <div class="skill-card"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
-                        <div class="skill-card"><i class="fa-brands fa-bootstrap"></i><span>Bootstrap</span></div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="category-label"><i class="fa-solid fa-server"></i> Backend</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card"><i class="fa-brands fa-php"></i><span>PHP</span></div>
-                        <div class="skill-card"><i class="fa-brands fa-laravel"></i><span>Laravel</span></div>
-                        <div class="skill-card"><i class="fa-brands fa-java"></i><span>Java</span></div>
-                        <div class="skill-card"><i class="fa-solid fa-database"></i><span>MySQL</span></div>
-                        <div class="skill-card"><i class="fa-solid fa-database"></i><span>PostgreSQL</span></div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="category-label"><i class="fa-solid fa-wrench"></i> Ferramentas</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
-                        <div class="skill-card"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
-                        <div class="skill-card"><i class="fa-solid fa-code"></i><span>VS Code</span></div>
-                        <div class="skill-card"><i class="fa-brands fa-figma"></i><span>Figma</span></div>
-                        <div class="skill-card"><i class="fa-solid fa-table"></i><span>SQL</span></div>
-                    </div>
-                </div>
+          </div>
+          <div class="hero-right" data-reveal data-delay="200">
+            <div class="photo-frame">
+              <div class="photo-border-anim"></div>
+              <img
+                src="img/foto.jpeg"
+                onerror="
+                  this.src =
+                    'https://ui-avatars.com/api/?name=HB&size=600&background=00c896&color=050d09&bold=true&font-size=0.4'
+                "
+                alt="Henric Baccin"
+                class="profile-photo"
+              />
+              <div class="photo-badge">
+                <i class="fa-solid fa-code"></i>
+                ADS — IFFAR
+              </div>
             </div>
-        </section>
-
-        <section id="projetos" class="secao">
-            <div class="section-header">
-                <h2 class="section-title">Projetos</h2>
-                <p class="section-sub">Uma seleção dos meus trabalhos mais recentes.</p>
+            <div class="hero-stats">
+              <div class="stat">
+                <span class="stat-num">4+</span>
+                <span class="stat-label">Projetos</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat">
+                <span class="stat-num">8+</span>
+                <span class="stat-label">Tecnologias</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat">
+                <span class="stat-num">2024</span>
+                <span class="stat-label">Início</span>
+              </div>
             </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-img-wrap">
-                        <img src="img/tccimg.png"
-                            onerror="this.src='https://placehold.co/600x340/146551/8FC1B5?text=TCC'"
-                            alt="Sistema de Repositório de TCC" class="project-img">
-                        <div class="project-overlay">
-                            <a href="https://github.com/Henric-ops/Sistema-de-reposit-rio-de-TCC.git" target="_blank"
-                                class="btn-ver-projeto">
-                                <i class="fa-brands fa-github"></i> Ver Projeto
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-body">
-                        <div class="project-tags">
-                            <span>Laravel</span><span>Bootstrap</span><span>PHP</span><span>MySQL</span>
-                        </div>
-                        <h3 class="project-title">Sistema de Repositório de TCC</h3>
-                        <p class="project-desc">Sistema web desenvolvido para armazenamento e gerenciamento de Trabalhos de Conclusão de Curso (TCC), permitindo o controle de bancas avaliadoras, orientadores e trabalhos acadêmicos.</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img-wrap">
-                        <img src="img/TelaDegustaCeva.png"
-                            onerror="this.src='https://placehold.co/600x340/146551/8FC1B5?text=Degustação'"
-                            alt="Sistema de Gerenciamento de Degustações" class="project-img">
-                        <div class="project-overlay">
-                            <a href="https://github.com/Henric-ops/Trabalho-final-web.git" target="_blank"
-                                class="btn-ver-projeto">
-                                <i class="fa-brands fa-github"></i> Ver Projeto
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-body">
-                        <div class="project-tags">
-                            <span>PHP</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>MySQL</span>
-                        </div>
-                        <h3 class="project-title">Sistema de Gerenciamento de Degustações</h3>
-                        <p class="project-desc">Plataforma para registrar e gerenciar experiências de degustação de cervejas, focada em usabilidade e controle completo do cadastro de rótulos.</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img-wrap">
-                        <img src="img/DashBarberHub.png"
-                            onerror="this.src='https://placehold.co/600x340/146551/8FC1B5?text=Projeto+03'"
-                            alt="Projeto 3" class="project-img">
-                        <div class="project-overlay">
-                            <a href="https://github.com/Henric-ops/BarberHub.git" target="_blank"
-                                class="btn-ver-projeto">
-                                <i class="fa-brands fa-github"></i> Ver Projeto
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-body">
-                        <div class="project-tags">
-                            <span>PHP</span><span>Laravel</span><span>MySQL</span><span>Bootstrap</span>
-                        </div>
-                        <h3 class="project-title">Sistema de Agendamento para Barbearia</h3>
-                        <p class="project-desc">Agendamento com controle de conflitos de horário, gestão de clientes e barbeiros, dashboards personalizados por perfil e relatórios exportáveis em PDF.</p>
-                    </div>
-                </div>
+          </div>
+        </div>
 
-    <div class="project-card">
-                    <div class="project-img-wrap">
-                        <img src="img/LoginCosmetiq.png"
-                            onerror="this.src='https://placehold.co/600x340/146551/8FC1B5?text=Projeto+04'"
-                            alt="Projeto 4" class="project-img">
-                        <div class="project-overlay">
-                            <a href="https://github.com/Henric-ops/Sistema-de-revenda.git" target="_blank"
-                                class="btn-ver-projeto">
-                                <i class="fa-brands fa-github"></i> Ver Projeto
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-body">
-                        <div class="project-tags">
-                            <span>PHP</span><span>Laravel</span><span>MySQL</span><span>Bootstrap</span><span>JavaScript</span>
-                        </div>
-                        <h3 class="project-title">Sistema de Gestão de Revendas de Cosméticos</h3>
-                        <p class="project-desc">Sistema desenvolvido para gerenciar revendas de cosméticos,com controle de clientes, vendas e pagamentos.Feito especialmente para atender às necessidades da minha mãe.</p>
-                    </div>
-                </div>
-                </div>
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+          <span>scroll</span>
+          <div class="scroll-line"></div>
+        </div>
+      </section>
+
+      <!-- TECNOLOGIAS -->
+      <section id="tecnologias" class="section">
+        <div class="section-label" data-reveal>
+          <span class="label-num">01</span>
+          <span class="label-text">Stack</span>
+        </div>
+        <div class="section-header" data-reveal data-delay="100">
+          <h2 class="section-title">Tecnologias</h2>
+          <p class="section-desc">Ferramentas e linguagens que domino.</p>
+        </div>
+
+        <div class="tech-wrapper" data-reveal data-delay="200">
+          <div class="tech-col">
+            <div class="tech-col-header">
+              <i class="fa-solid fa-laptop-code"></i> Frontend
             </div>
-        </section>
-
-        <section id="formacao" class="secao">
-            <div class="section-header">
-                <h2 class="section-title">Formação</h2>
-                <p class="section-sub">Minha trajetória acadêmica e cursos.</p>
-            </div>
-
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-top">
-                            <span class="timeline-badge academic"><i class="fa-solid fa-graduation-cap"></i> Graduação</span>
-                            <span class="timeline-year">2024 — Atual</span>
-                        </div>
-                        <h3 class="timeline-title">Análise e Desenvolvimento de Sistemas</h3>
-                        <p class="timeline-institution"><i class="fa-solid fa-building-columns"></i> IFFAR — Campus São Vicente do Sul/RS</p>
-                        <p class="timeline-desc">Curso superior com foco em desenvolvimento de software, estruturas de dados, banco de dados e engenharia de software.</p>
-                    </div>
+            <div class="tech-list">
+              <div class="tech-item">
+                <i class="fa-brands fa-html5"></i>
+                <span>HTML5</span>
+                <div class="tech-bar">
+                  <div class="tech-fill" style="--w: 92%"></div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-top">
-                            <span class="timeline-badge course"><i class="fa-solid fa-award"></i> Curso</span>
-                            <span class="timeline-year">27/02/2026</span>
-                        </div>
-                        <h3 class="timeline-title">Nano Course DevOps & Agile Culture</h3>
-                        <p class="timeline-institution"><i class="fa-solid fa-building-columns"></i> FIAP / Nano Courses</p>
-                        <p class="timeline-desc">Certificado com 60 horas em práticas de DevOps e cultura ágil para desenvolvimento colaborativo e entrega contínua.</p>
-                    </div>
+              </div>
+              <div class="tech-item">
+                <i class="fa-brands fa-css3-alt"></i>
+                <span>CSS3</span>
+                <div class="tech-bar">
+                  <div class="tech-fill" style="--w: 88%"></div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-top">
-                            <span class="timeline-badge course"><i class="fa-solid fa-award"></i> Curso</span>
-                            <span class="timeline-year">27/02/2026</span>
-                        </div>
-                        <h3 class="timeline-title">Curso de Inglês</h3>
-                        <p class="timeline-institution"><i class="fa-solid fa-building-columns"></i> Kultivi</p>
-                        <p class="timeline-desc">Certificado de participação no curso de Inglês com carga horária estimada de 115 horas.</p>
-                    </div>
+              </div>
+              <div class="tech-item">
+                <i class="fa-brands fa-js"></i>
+                <span>JavaScript</span>
+                <div class="tech-bar">
+                  <div class="tech-fill" style="--w: 78%"></div>
                 </div>
-            </div>
-        </section>
-
-        <section id="contatos" class="secao">
-            <div class="section-header">
-                <h2 class="section-title">Contatos</h2>
-            </div>
-
-            <div class="contatos-layout">
-                <div class="contatos-info">
-                    <p class="contatos-text">Estou disponível para projetos freelance, oportunidades de emprego e para aplicar meus conhecimentos em desenvolvimento web. Vamos conversar!</p>
-
-                    <div class="contato-items">
-                        <a href="mailto:henricbaccin@gmail.com" class="contato-item">
-                            <div class="contato-icon"><i class="fa-solid fa-envelope"></i></div>
-                            <div>
-                                <span class="contato-label">Email</span>
-                                <span class="contato-value">henricbaccin@gmail.com</span>
-                            </div>
-                        </a>
-                        <a href="https://wa.me/5555996405560" class="contato-item" target="_blank">
-                            <div class="contato-icon whats"><i class="fa-brands fa-whatsapp"></i></div>
-                            <div>
-                                <span class="contato-label">WhatsApp</span>
-                                <span class="contato-value">(55) 99640-5560</span>
-                            </div>
-                        </a>
-                        <a href="https://www.linkedin.com/in/henric-baccin/" class="contato-item" target="_blank">
-                            <div class="contato-icon linkedin"><i class="fa-brands fa-linkedin-in"></i></div>
-                            <div>
-                                <span class="contato-label">LinkedIn</span>
-                                <span class="contato-value">henric</span>
-                            </div>
-                        </a>
-                        <a href="https://github.com/Henric-ops" class="contato-item" target="_blank">
-                            <div class="contato-icon github"><i class="fa-brands fa-github"></i></div>
-                            <div>
-                                <span class="contato-label">GitHub</span>
-                                <span class="contato-value">Henric</span>
-                            </div>
-                        </a>
-                    </div>
+              </div>
+              <div class="tech-item">
+                <i class="fa-brands fa-bootstrap"></i>
+                <span>Bootstrap</span>
+                <div class="tech-bar">
+                  <div class="tech-fill" style="--w: 82%"></div>
                 </div>
+              </div>
             </div>
-        </section>
+          </div>
+          <div class="tech-col-divider"></div>
+          <div class="tech-col">
+            <div class="tech-col-header">
+              <i class="fa-solid fa-server"></i> Backend
+            </div>
+            <div class="tech-list">
+              <div class="tech-item">
+                <i class="fa-brands fa-php"></i>
+                <span>PHP</span>
+                <div class="tech-bar">
+                  <div class="tech-fill" style="--w: 80%"></div>
+                </div>
+              </div>
+              <div class="tech-item">
+                <i class="fa-brands fa-laravel"></i>
+                <span>Laravel</span>
+                <div class="tech-bar">
+                  <div class="tech-fill" style="--w: 75%"></div>
+                </div>
+              </div>
+              <div class="tech-item">
+                <i class="fa-brands fa-java"></i>
+                <span>Java</span>
+                <div class="tech-bar">
+                  <div class="tech-fill" style="--w: 65%"></div>
+                </div>
+              </div>
+              <div class="tech-item">
+                <i class="fa-solid fa-database"></i>
+                <span>MySQL / PostgreSQL</span>
+                <div class="tech-bar">
+                  <div class="tech-fill" style="--w: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tech-col-divider"></div>
+          <div class="tech-col">
+            <div class="tech-col-header">
+              <i class="fa-solid fa-wrench"></i> Ferramentas
+            </div>
+            <div class="tech-list">
+              <div class="tech-item">
+                <i class="fa-brands fa-git-alt"></i>
+                <span>Git / GitHub</span>
+                <div class="tech-bar">
+                  <div class="tech-fill" style="--w: 85%"></div>
+                </div>
+              </div>
+              <div class="tech-item">
+                <i class="fa-solid fa-code"></i>
+                <span>VS Code</span>
+                <div class="tech-bar">
+                  <div class="tech-fill" style="--w: 90%"></div>
+                </div>
+              </div>
+              <div class="tech-item">
+                <i class="fa-brands fa-figma"></i>
+                <span>Figma</span>
+                <div class="tech-bar">
+                  <div class="tech-fill" style="--w: 70%"></div>
+                </div>
+              </div>
+              <div class="tech-item">
+                <i class="fa-solid fa-table"></i>
+                <span>SQL</span>
+                <div class="tech-bar">
+                  <div class="tech-fill" style="--w: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJETOS -->
+      <section id="projetos" class="section">
+        <div class="section-label" data-reveal>
+          <span class="label-num">02</span>
+          <span class="label-text">Work</span>
+        </div>
+        <div class="section-header" data-reveal data-delay="100">
+          <h2 class="section-title">Projetos</h2>
+          <p class="section-desc">Seleção dos meus trabalhos mais recentes.</p>
+        </div>
+
+        <div class="projects-grid">
+          <div class="project-card featured" data-reveal data-delay="150">
+            <div class="project-number">01</div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span>Laravel</span><span>Bootstrap</span><span>PHP</span
+                ><span>MySQL</span>
+              </div>
+              <h3 class="project-name">Sistema de Repositório de TCC</h3>
+              <p class="project-desc">
+                Sistema web para armazenamento e gerenciamento de Trabalhos de
+                Conclusão de Curso — controle de bancas, orientadores e
+                trabalhos acadêmicos.
+              </p>
+              <a
+                href="https://github.com/Henric-ops/Sistema-de-reposit-rio-de-TCC.git"
+                target="_blank"
+                class="project-link"
+              >
+                Ver no GitHub <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+            <div class="project-image-wrap">
+              <img
+                src="img/tccimg.png"
+                onerror="
+                  this.src =
+                    'https://placehold.co/600x380/00291f/00c896?text=TCC'
+                "
+                alt="Sistema TCC"
+                class="project-image"
+              />
+            </div>
+          </div>
+
+          <div class="project-card" data-reveal data-delay="200">
+            <div class="project-number">02</div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span>PHP</span><span>HTML5</span><span>CSS3</span
+                ><span>JavaScript</span><span>MySQL</span>
+              </div>
+              <h3 class="project-name">Gerenciamento de Degustações</h3>
+              <p class="project-desc">
+                Plataforma para registrar e gerenciar experiências de degustação
+                de cervejas, focada em usabilidade e controle de rótulos.
+              </p>
+              <a
+                href="https://github.com/Henric-ops/Trabalho-final-web.git"
+                target="_blank"
+                class="project-link"
+              >
+                Ver no GitHub <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+            <div class="project-image-wrap">
+              <img
+                src="img/TelaDegustaCeva.png"
+                onerror="
+                  this.src =
+                    'https://placehold.co/600x380/00291f/00c896?text=Degustação'
+                "
+                alt="Degustação"
+                class="project-image"
+              />
+            </div>
+          </div>
+
+          <div class="project-card" data-reveal data-delay="250">
+            <div class="project-number">03</div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span>PHP</span><span>Laravel</span><span>MySQL</span
+                ><span>Bootstrap</span>
+              </div>
+              <h3 class="project-name">BarberHub — Agendamento</h3>
+              <p class="project-desc">
+                Agendamento com controle de conflitos de horário, gestão de
+                clientes e barbeiros, dashboards por perfil e relatórios em PDF.
+              </p>
+              <a
+                href="https://github.com/Henric-ops/BarberHub.git"
+                target="_blank"
+                class="project-link"
+              >
+                Ver no GitHub <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+            <div class="project-image-wrap">
+              <img
+                src="img/DashBarberHub.png"
+                onerror="
+                  this.src =
+                    'https://placehold.co/600x380/00291f/00c896?text=BarberHub'
+                "
+                alt="BarberHub"
+                class="project-image"
+              />
+            </div>
+          </div>
+
+          <div class="project-card" data-reveal data-delay="300">
+            <div class="project-number">04</div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span>PHP</span><span>Laravel</span><span>MySQL</span
+                ><span>Bootstrap</span><span>JS</span>
+              </div>
+              <h3 class="project-name">Cosmetiq — Gestão de Revendas</h3>
+              <p class="project-desc">
+                Sistema para gerenciar revendas de cosméticos com controle de
+                clientes, vendas e pagamentos — desenvolvido para atender as
+                necessidades da minha mãe.
+              </p>
+              <a
+                href="https://github.com/Henric-ops/Sistema-de-revenda.git"
+                target="_blank"
+                class="project-link"
+              >
+                Ver no GitHub <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+            <div class="project-image-wrap">
+              <img
+                src="img/LoginCosmetiq.png"
+                onerror="
+                  this.src =
+                    'https://placehold.co/600x380/00291f/00c896?text=Cosmetiq'
+                "
+                alt="Cosmetiq"
+                class="project-image"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FORMAÇÃO -->
+      <section id="formacao" class="section">
+        <div class="section-label" data-reveal>
+          <span class="label-num">03</span>
+          <span class="label-text">Educação</span>
+        </div>
+        <div class="section-header" data-reveal data-delay="100">
+          <h2 class="section-title">Formação</h2>
+          <p class="section-desc">Trajetória acadêmica e certificações.</p>
+        </div>
+
+        <div class="timeline" data-reveal data-delay="200">
+          <div class="timeline-item">
+            <div class="tl-left">
+              <span class="tl-year">2024 — Atual</span>
+            </div>
+            <div class="tl-line">
+              <div class="tl-dot active"></div>
+            </div>
+            <div class="tl-card">
+              <span class="tl-badge grad"
+                ><i class="fa-solid fa-graduation-cap"></i> Graduação</span
+              >
+              <h3 class="tl-title">Análise e Desenvolvimento de Sistemas</h3>
+              <p class="tl-institution">
+                <i class="fa-solid fa-building-columns"></i> IFFAR — Campus São
+                Vicente do Sul / RS
+              </p>
+              <p class="tl-desc">
+                Curso superior com foco em desenvolvimento de software,
+                estruturas de dados, banco de dados e engenharia de software.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="tl-left">
+              <span class="tl-year">Fev. 2026</span>
+            </div>
+            <div class="tl-line">
+              <div class="tl-dot"></div>
+            </div>
+            <div class="tl-card">
+              <span class="tl-badge cert"
+                ><i class="fa-solid fa-award"></i> Certificado</span
+              >
+              <h3 class="tl-title">Nano Course DevOps & Agile Culture</h3>
+              <p class="tl-institution">
+                <i class="fa-solid fa-building-columns"></i> FIAP / Nano Courses
+              </p>
+              <p class="tl-desc">
+                60 horas em práticas de DevOps e cultura ágil para
+                desenvolvimento colaborativo e entrega contínua.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="tl-left">
+              <span class="tl-year">Fev. 2026</span>
+            </div>
+            <div class="tl-line">
+              <div class="tl-dot"></div>
+            </div>
+            <div class="tl-card">
+              <span class="tl-badge cert"
+                ><i class="fa-solid fa-award"></i> Certificado</span
+              >
+              <h3 class="tl-title">Curso de Inglês</h3>
+              <p class="tl-institution">
+                <i class="fa-solid fa-building-columns"></i> Kultivi
+              </p>
+              <p class="tl-desc">
+                Certificado com carga horária estimada de 115 horas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTATOS -->
+      <section id="contatos" class="section">
+        <div class="section-label" data-reveal>
+          <span class="label-num">04</span>
+          <span class="label-text">Contato</span>
+        </div>
+        <div class="section-header" data-reveal data-delay="100">
+          <h2 class="section-title">Vamos conversar<em>.</em></h2>
+          <p class="section-desc">
+            Disponível para projetos freelance e oportunidades de emprego.
+          </p>
+        </div>
+
+        <div class="contacts-grid" data-reveal data-delay="200">
+          <a href="mailto:henricbaccin@gmail.com" class="contact-card">
+            <div class="contact-icon-wrap">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">henricbaccin@gmail.com</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right contact-arrow"></i>
+          </a>
+          <a
+            href="https://wa.me/5555996405560"
+            target="_blank"
+            class="contact-card"
+          >
+            <div class="contact-icon-wrap green">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">WhatsApp</span>
+              <span class="contact-value">(55) 99640-5560</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right contact-arrow"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/henric-baccin/"
+            target="_blank"
+            class="contact-card"
+          >
+            <div class="contact-icon-wrap blue">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value">henric-baccin</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right contact-arrow"></i>
+          </a>
+          <a
+            href="https://github.com/Henric-ops"
+            target="_blank"
+            class="contact-card"
+          >
+            <div class="contact-icon-wrap">
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">GitHub</span>
+              <span class="contact-value">Henric-ops</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right contact-arrow"></i>
+          </a>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
-        <div class="footer-inner">
-            <p class="footer-copy">&copy; 2026 Henric. Todos os direitos reservados.</p>
-            <div class="footer-links">
-                <a href="https://github.com/Henric-ops" target="_blank" rel="noopener" title="GitHub">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/henric-baccin/" target="_blank" rel="noopener" title="LinkedIn">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-                <a href="https://wa.me/5555996405560" target="_blank" rel="noopener" title="WhatsApp">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
-                <a href="mailto:henricbaccin@gmail.com" target="_blank" title="Email">
-                    <i class="fa-solid fa-envelope"></i>
-                </a>
-            </div>
+      <div class="footer-inner">
+        <span class="footer-logo">HB<span>.</span></span>
+        <p class="footer-copy">
+          © 2026 Henric Baccin Sander. Todos os direitos reservados.
+        </p>
+        <div class="footer-links">
+          <a href="https://github.com/Henric-ops" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/henric-baccin/" target="_blank"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+          <a href="https://wa.me/5555996405560" target="_blank"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
         </div>
+      </div>
     </footer>
 
     <script src="js/script.js"></script>
-</body>
-
+  </body>
 </html>

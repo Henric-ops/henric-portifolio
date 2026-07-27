@@ -1,4 +1,4 @@
-﻿/* ── HEADER SCROLL ───────────────────────────────────────── */
+
 const header = document.getElementById("header");
 window.addEventListener(
   "scroll",

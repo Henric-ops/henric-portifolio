@@ -1198,7 +1198,6 @@ main {
     .contacts-grid {
         grid-template-columns: 1fr;
     }
-}
 
 @media (max-width: 780px) {
     #menuNav {

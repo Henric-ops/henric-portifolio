@@ -1171,14 +1171,15 @@ main {
     .tech-wrapper {
         grid-template-columns: 1fr;
     }
+}
 
     .tech-col-divider {
         width: 100%;
         height: 1px;
     }
 
-    .projects-grid {
-        grid-template-columns: 1fr;
+    .hamburger {
+        display: flex;
     }
 
     .project-card.featured {

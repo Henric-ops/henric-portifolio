@@ -76,6 +76,10 @@ const revealObserver = new IntersectionObserver(
         const delay = entry.target.dataset.delay || 0;
         setTimeout(() => {
           entry.target.classList.add("revealed");
+          // se tiver nome para animar, dispare a animação letra-a-letra
+            if (entry.target.querySelector && entry.target.querySelector('#typed-first')) {
+              animateName();
+            }
         }, parseInt(delay));
         revealObserver.unobserve(entry.target);
       }
@@ -109,4 +113,41 @@ document.querySelectorAll(".project-card").forEach((card, i) => {
   card.setAttribute("data-delay", i * 80 + 120);
   revealObserver.observe(card);
 });
+
+/* Animação letra-a-letra para o nome */
+function animateName() {
+  const first = document.getElementById('typed-first');
+  const last = document.getElementById('typed-last');
+  if ((!first && !last) || (first && first.dataset.animated)) return;
+
+  const firstText = first ? first.dataset.text || first.textContent.trim() : '';
+  const lastText = last ? last.dataset.text || last.textContent.trim() : '';
+
+  if (first) first.textContent = '';
+  if (last) last.textContent = '';
+
+  const allChars = [];
+
+  firstText.split('').forEach(ch => {
+    const span = document.createElement('span');
+    span.className = 'char';
+    span.textContent = ch;
+    if (first) first.appendChild(span);
+    allChars.push(span);
+  });
+
+  const pause = allChars.length * 60 + 120;
+  lastText.split('').forEach((ch, index) => {
+    const span = document.createElement('span');
+    span.className = 'char';
+    span.textContent = ch;
+    if (last) last.appendChild(span);
+    allChars.push(span);
+    setTimeout(() => span.classList.add('show'), pause + index * 60);
+  });
+
+  allChars.slice(0, firstText.length).forEach((c, i) => setTimeout(() => c.classList.add('show'), i * 60));
+
+  if (first) first.dataset.animated = '1';
+}
     

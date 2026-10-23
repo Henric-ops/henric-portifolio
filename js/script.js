@@ -8,6 +8,10 @@ const destino = document.getElementById("typing");
 const form = document.getElementById("form-contato");
 const successMsg = document.getElementById("mensagem-sucesso");
 
+if ("scrollRestoration" in window.history) {
+    window.history.scrollRestoration = "manual";
+}
+
 const savedTheme = localStorage.getItem("tema");
 if (savedTheme === "light") {
     corpo.classList.remove("dark");
@@ -36,30 +40,54 @@ menuToggle?.addEventListener("click", () => {
 linksMenu.forEach(link => {
     link.addEventListener("click", event => {
         event.preventDefault();
-        const targetId = link.getAttribute("href");
-        const target = document.querySelector(targetId);
-        if (target) {
-            target.scrollIntoView({ behavior: "smooth", block: "start" });
+        const sectionId = link.getAttribute("href")?.slice(1);
+        if (sectionId) {
+            mostrarSecao(sectionId, true);
         }
-        linksMenu.forEach(l => l.classList.remove("active"));
-        link.classList.add("active");
-        menuNav.classList.remove("show");
-        menuToggle.textContent = "☰";
-        menuToggle.setAttribute("aria-expanded", "false");
     });
 });
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            linksMenu.forEach(link => {
-                link.classList.toggle("active", link.getAttribute("href") === `#${entry.target.id}`);
-            });
+function mostrarSecao(sectionId, atualizarHistorico = false) {
+    const secaoAtiva = Array.from(sections).find(section => section.id === sectionId) || sections[0];
+    if (!secaoAtiva) return;
+
+    sections.forEach(section => {
+        section.classList.toggle("is-active", section === secaoAtiva);
+    });
+    linksMenu.forEach(link => {
+        const ativa = link.getAttribute("href") === `#${secaoAtiva.id}`;
+        link.classList.toggle("active", ativa);
+        if (ativa) {
+            link.setAttribute("aria-current", "page");
+        } else {
+            link.removeAttribute("aria-current");
         }
     });
-}, { threshold: 0.45 });
 
-sections.forEach(section => observer.observe(section));
+    menuNav.classList.remove("show");
+    if (menuToggle) {
+        menuToggle.textContent = "☰";
+        menuToggle.setAttribute("aria-expanded", "false");
+    }
+    window.scrollTo(0, 0);
+
+    const hash = `#${secaoAtiva.id}`;
+    if (atualizarHistorico && window.location.hash !== hash) {
+        window.history.pushState(null, "", hash);
+    }
+}
+
+const secaoInicial = Array.from(sections).find(section => section.id === window.location.hash.slice(1));
+if (window.location.hash) {
+    window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+}
+mostrarSecao(secaoInicial?.id || sections[0]?.id);
+if (secaoInicial) {
+    window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}#${secaoInicial.id}`);
+}
+window.addEventListener("popstate", () => {
+    mostrarSecao(window.location.hash.slice(1) || sections[0]?.id);
+});
 
 if (destino) {
     let index = 0;
